@@ -787,3 +787,18 @@ section .location {
     padding-left: 0.1em;
   }
 }
+
+#certificates {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; /* Distributes items evenly with space between them */
+  align-items: center; /* Centers items vertically */
+  gap: 1rem;
+}
+
+.certificate-badge img {
+	width: auto;
+	height: 150px;
+	display: block;
+}

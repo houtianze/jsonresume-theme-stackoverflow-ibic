@@ -6,34 +6,49 @@
     <section id="certificates">
       {{#each resume.certificates}}
         <section class="certificate-item">
-          <header class="clear">
-            {{#if date}}
-              <div class="date">
-                {{date}}
-              </div>
-            {{/if}}
-            <div class="header-left">
-              {{#if name}}
-                <div class="name">
-                  {{name}}
+          {{!-- "baddge" is not standard (i.e. not in JSON Resume schema) --}}
+          {{#if badge}}
+            <div class="certificate-badge">
+              <a href="{{url}}" target="_blank">
+                <img src="{{badge}}" alt="{{name}}"/>
+                {{!--
+                <figure>
+                  <img src="{{badge}}" alt="{{name}}"/>
+                  <figcaption>{{name}}</figcaption>
+                </figure>
+                --}}
+              </a>
+            </div>
+          {{else}}
+            <header class="clear">
+              {{#if date}}
+                <div class="date">
+                  {{date}}
                 </div>
               {{/if}}
-              {{#if issuer}}
-                <div class="issuer">
-                  {{issuer}}
-                </div>
+              <div class="header-left">
+                {{#if name}}
+                  <div class="name">
+                    {{name}}
+                  </div>
+                {{/if}}
+                {{#if issuer}}
+                  <div class="issuer">
+                    {{issuer}}
+                  </div>
+                {{/if}}
+              </div>
+            </header>
+
+            <div class="item">
+              {{#if url}}
+                <span class="url">
+                  <span class="fas fa-external-link-alt"></span>
+                  <a target="_blank" href="{{url}}">{{url}}</a>
+                </span>
               {{/if}}
             </div>
-          </header>
-
-          <div class="item">
-            {{#if url}}
-              <span class="url">
-                <span class="fas fa-external-link-alt"></span>
-                <a target="_blank" href="{{url}}">{{url}}</a>
-              </span>
-            {{/if}}
-          </div>
+          {{/if}}
         </section>
       {{/each}}
     </section>
