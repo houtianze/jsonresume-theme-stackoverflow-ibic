@@ -40,28 +40,31 @@
 
           {{#location}}
             <span class="location">
-				<span class="fas fa-map-marker-alt"></span>
-              {{#if city}}
-                <span class="city">{{city}},</span>
-              {{/if}}
-              {{#if countryCode}}
-                <span class="countryCode">({{countryCode}})</span>
-              {{/if}}
-              {{#if region}}
-                <span class="region">{{region}}</span>
-              {{/if}}
-			</span>
+              <span class="fas fa-map-marker-alt"></span>
+                    {{#if city}}
+                      <span class="city">{{city}},</span>
+                    {{/if}}
+                    {{#if countryCode}}
+                      <span class="countryCode">({{countryCode}})</span>
+                    {{/if}}
+                    {{#if region}}
+                      <span class="region">{{region}}</span>
+                    {{/if}}
+            </span>
           {{/location}}
           {{#if website}}
             <span class="website">
-    		<a target="_blank" href="{{website}}">{{website}}</a>
-    	</span> {{/if}} {{#if keywords.length}}
-          <ul class="keywords">
-            {{#each keywords}}
-              <li>{{.}}</li>
-            {{/each}}
-          </ul>
-        {{/if}}
+              {{!-- <span class="fas fa-external-link-alt"></span> --}}
+              <a target="_blank" href="{{website}}">{{website}}</a>
+            </span>
+          {{/if}}
+          {{#if keywords.length}}
+              <ul class="keywords">
+                {{#each keywords}}
+                  <li>{{.}}</li>
+                {{/each}}
+              </ul>
+          {{/if}}
           <div class="item" id="work-item">
             {{#if summary}}
               <div class="summary">{{paragraphSplit summary}}</div>

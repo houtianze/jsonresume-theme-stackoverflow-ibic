@@ -791,9 +791,8 @@ section .location {
 #certificates {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-start center; /* Centers items vertically */
   justify-content: space-between; /* Distributes items evenly with space between them */
-  align-items: center; /* Centers items vertically */
   gap: 1rem;
 }
 
