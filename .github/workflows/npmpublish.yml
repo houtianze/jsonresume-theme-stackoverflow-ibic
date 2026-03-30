@@ -64,8 +64,8 @@ jobs:
           registry-url: https://npm.pkg.github.com
           # Defaults to the user or organization that owns the workflow file
           # scope: '@houtianze'
-      # - run: >-
-      #     sed -i 's#"name": *"#"name": "@houtianze/#' package.json
+      - run: >-
+          sed -i 's#"name": *"#"name": "@houtianze/#' package.json
       # - run: cat $NPM_CONFIG_USERCONFIG
       - run: npm publish
         env:
