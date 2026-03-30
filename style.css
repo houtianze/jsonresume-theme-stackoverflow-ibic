@@ -553,6 +553,7 @@ section .location {
   width: 7.5em;
 }
 
+.level.professional .bar::after, /* Added by me */
 .level.master .bar::after,
 .level.native.speaker .bar::after {
   background: #59c596;

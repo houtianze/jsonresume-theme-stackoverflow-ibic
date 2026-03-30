@@ -62,8 +62,10 @@ jobs:
         with:
           node-version: 24
           registry-url: https://npm.pkg.github.com
-          # Defaults to the user or organization that owns the workflow file
+          # Defaults to the user or organization that owns the workflow file, so the following line is optional
           # scope: '@houtianze'
+      # The following sed command is needed as GitHub Packages won't allow publishing to the global scope/namespace,
+      # otherwise, it will try to publish to npmjs instead of GitHub Packages and failed to to the wrong token used.
       - run: >-
           sed -i 's#"name": *"#"name": "@houtianze/#' package.json
       # - run: cat $NPM_CONFIG_USERCONFIG
