@@ -6,6 +6,11 @@
 
     <section id="work">
       {{#each resume.work}}
+        {{#eq @index 3}}
+        <header>
+          <h2 class='section-title'>Prior Roles</h2>
+        </header>
+        {{/eq}}
         <section class="work-item">
           {{#if summary}}
             {{#if @first}}
@@ -29,11 +34,11 @@
             <div class="date">
               {{#if startDate}}
                 <span class="startDate">{{MY startDate}}</span>
-              {{/if}}
               {{#if endDate}}
                 <span class="endDate">- {{MY endDate}}</span>
               {{else}}
                 <span class="endDate">- Current</span>
+              {{/if}}
               {{/if}}
             </div>
           </header>
@@ -81,4 +86,5 @@
       {{/each}}
     </section>
   </section>
+
 {{/if}}

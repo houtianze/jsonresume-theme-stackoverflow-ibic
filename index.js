@@ -19,6 +19,21 @@ Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
+Handlebars.registerHelper('lt', function(a, b, options) {
+  return (a < b) ? options.fn(this) : options.inverse(this);
+});
+Handlebars.registerHelper('eq', function (a, b, options) {
+  return a === b ? options.fn(this) : options.inverse(this);
+});
+Handlebars.registerHelper('gt', function(a, b, options) {
+  if (a > b) {
+    return options.fn(this); // Renders the "if" block
+  }
+  return options.inverse(this); // Renders the "else" block
+});
+Handlebars.registerHelper("sub", function(a, b, options) {
+  return Number.parseInt(a) - Number.parseInt(b);
+});
 
 function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
