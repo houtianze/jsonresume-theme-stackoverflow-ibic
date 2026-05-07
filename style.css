@@ -354,8 +354,9 @@ section .location {
 .institution,
 .organization,
 .awarder {
-  color: #606d76;
-  font-weight: 400;
+  /* color: #606d76; */
+  color: blue;
+  font-weight: 500;
 }
 
 .section header .date {
