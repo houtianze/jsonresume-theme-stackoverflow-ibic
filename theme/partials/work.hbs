@@ -63,13 +63,6 @@
               <a target="_blank" href="{{website}}">{{website}}</a>
             </span>
           {{/if}}
-          {{#if keywords.length}}
-              <ul class="keywords">
-                {{#each keywords}}
-                  <li>{{.}}</li>
-                {{/each}}
-              </ul>
-          {{/if}}
           <div class="item" id="work-item">
             {{#if summary}}
               <div class="summary">{{paragraphSplit summary}}</div>
@@ -82,6 +75,13 @@
               </ul>
             {{/if}}
           </div>
+          {{#if keywords.length}}
+              <ul class="keywords">
+                {{#each keywords}}
+                  <li>{{.}}</li>
+                {{/each}}
+              </ul>
+          {{/if}}
         </section>
       {{/each}}
     </section>

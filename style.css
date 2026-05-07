@@ -371,6 +371,14 @@ section .location {
   margin: 0.5em 0;
 }
 
+ul.keywords::before {
+  content: "Skills: ";
+  font-weight: 600;
+}
+#skills .keywords::before {
+  content: none;
+}
+
 .keywords li,
 .courses li {
   display: inline-block;
@@ -754,7 +762,7 @@ section .location {
     margin: 0.5em 0 0 0;
   }
   ul.keywords::before {
-    content: "Skills acquired: ";
+    content: "Skills: ";
   }
   #skills .keywords::before {
     content: none;
