@@ -716,8 +716,15 @@ ul.keywords::before {
   .section header {
     padding-bottom: 0.15rem;
   }
+  .clear {
+    margin: 0.5rem auto;
+  }
   .top-header {
     text-align: center;
+  }
+  .section header .date {
+    display: inline;
+    float: right;
   }
   .section .location {
     padding-bottom: 0.15rem;
