@@ -716,6 +716,9 @@ ul.keywords::before {
   .section header {
     padding-bottom: 0.15rem;
   }
+  .top-header {
+    text-align: center;
+  }
   .section .location {
     padding-bottom: 0.15rem;
   }

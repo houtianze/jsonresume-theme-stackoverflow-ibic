@@ -1,14 +1,14 @@
 {{#if resume.work.length}}
   <section class="section">
-    <header>
+    <header class="top-header">
       <h2 class='section-title'>Work Experience <span class="item-count">({{resume.work.length}})</span></h2>
     </header>
 
     <section id="work">
       {{#each resume.work}}
-        {{#eq @index 3}}
+        {{#eq @index 4}}
         <header>
-          <h2 class='section-title'>Prior Roles</h2>
+          <h2 class='section-title'>Early Career</h2>
         </header>
         {{/eq}}
         <section class="work-item">

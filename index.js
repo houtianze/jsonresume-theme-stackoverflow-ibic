@@ -19,11 +19,11 @@ Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
-Handlebars.registerHelper('lt', function(a, b, options) {
-  return (a < b) ? options.fn(this) : options.inverse(this);
-});
 Handlebars.registerHelper('eq', function (a, b, options) {
   return a === b ? options.fn(this) : options.inverse(this);
+});
+Handlebars.registerHelper('lt', function(a, b, options) {
+  return (a < b) ? options.fn(this) : options.inverse(this);
 });
 Handlebars.registerHelper('gt', function(a, b, options) {
   if (a > b) {
